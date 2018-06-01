@@ -56,7 +56,12 @@ class WorkRequestsController extends ApiController
      */
     public function store(Requests\StoreWorkRequest $request)
     {
+
+        echo 111;
+
         $this->authorize('create', WorkRequest::class);
+
+        echo 222;
 
         $input = $request->all();
 

@@ -24,6 +24,7 @@ class WorkRequestsFunctionalTest extends Testing\BeltTestCase
             'workable_id' => 1,
             'workable_type' => 'teams',
         ]);
+
         $response->assertStatus(201);
         $response->assertJsonFragment(['id']);
         $workRequestID = array_get($response->json(), 'id');

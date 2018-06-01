@@ -13,7 +13,7 @@ class PublishCommandTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers \Belt\Core\Commands\PublishCommand::handle
+     * @covers \Belt\Workflow\Commands\PublishCommand::handle
      */
     public function testHandle()
     {
@@ -36,7 +36,7 @@ class PublishCommandTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers \Belt\Core\Commands\PublishCommand::publish
+     * @covers \Belt\Workflow\Commands\PublishCommand::publish
      */
     public function testPublish()
     {
@@ -53,7 +53,7 @@ class PublishCommandTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers \Belt\Core\Commands\PublishCommand::service
+     * @covers \Belt\Workflow\Commands\PublishCommand::service
      */
     public function testService()
     {

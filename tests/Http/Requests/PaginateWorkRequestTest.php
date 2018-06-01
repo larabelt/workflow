@@ -3,7 +3,7 @@
 use Mockery as m;
 use Belt\Core\Testing;
 use Belt\Core\Http\Requests\PaginateWorkRequests;
-use Belt\Core\Services\WorkRequestService;
+use Belt\Workflow\Services\WorkRequestService;
 use Illuminate\Database\Eloquent\Builder;
 
 class PaginateWorkRequestTest extends Testing\BeltTestCase
@@ -17,7 +17,7 @@ class PaginateWorkRequestTest extends Testing\BeltTestCase
     }
 
     /**
-     * @covers \Belt\Core\Http\Requests\PaginateWorkRequests::modifyQuery
+     * @covers \Belt\Workflow\Http\Requests\PaginateWorkRequests::modifyQuery
      */
     public function test()
     {

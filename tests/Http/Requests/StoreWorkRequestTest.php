@@ -1,13 +1,13 @@
 <?php
 
 use Belt\Core\Testing;
-use Belt\Core\Http\Requests\StoreWorkRequest;
+use Belt\Workflow\Http\Requests\StoreWorkRequest;
 
 class StoreWorkRequestTest extends Testing\BeltTestCase
 {
 
     /**
-     * @covers \Belt\Core\Http\Requests\StoreWorkRequest::rules
+     * @covers \Belt\Workflow\Http\Requests\StoreWorkRequest::rules
      */
     public function test()
     {

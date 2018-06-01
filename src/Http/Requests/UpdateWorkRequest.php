@@ -7,7 +7,7 @@ use Belt\Workflow\Services\WorkflowServiceTrait;
 
 /**
  * Class UpdateWorkRequest
- * @package Belt\Core\Http\Requests
+ * @package Belt\Workflow\Http\Requests
  */
 class UpdateWorkRequest extends Belt\Core\Http\Requests\FormRequest
 {

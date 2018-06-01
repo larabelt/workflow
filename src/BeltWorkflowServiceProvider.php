@@ -9,8 +9,8 @@ use Illuminate\Foundation\AliasLoader;
 use Illuminate\Routing\Router;
 
 /**
- * Class BeltCoreServiceProvider
- * @package Belt\Core
+ * Class BeltWorkflowServiceProvider
+ * @package Belt\Workflow
  */
 class BeltWorkflowServiceProvider extends Belt\Core\BeltServiceProvider
 {

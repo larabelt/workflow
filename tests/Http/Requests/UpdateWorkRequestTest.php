@@ -3,7 +3,7 @@
 use Mockery as m;
 use Belt\Core\Testing;
 use Belt\Workflow\WorkRequest;
-use Belt\Core\Http\Requests\UpdateWorkRequest;
+use Belt\Workflow\Http\Requests\UpdateWorkRequest;
 use Belt\Workflow\Services\WorkflowService;
 use Illuminate\Database\Eloquent\Builder;
 
@@ -18,7 +18,7 @@ class UpdateWorkRequestTest extends Testing\BeltTestCase
     }
 
     /**
-     * @covers \Belt\Core\Http\Requests\UpdateWorkRequest::rules
+     * @covers \Belt\Workflow\Http\Requests\UpdateWorkRequest::rules
      */
     public function test()
     {

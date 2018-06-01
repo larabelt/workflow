@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class WorkRequest
- * @package Belt\Core
+ * @package Belt\Workflow
  */
 class WorkRequest extends Model
 {

@@ -7,7 +7,7 @@ use Illuminate\Console\Command;
 
 /**
  * Class PublishCommand
- * @package Belt\Core\Commands
+ * @package Belt\Workflow\Commands
  */
 class PublishCommand extends Command
 {
@@ -24,7 +24,7 @@ class PublishCommand extends Command
      *
      * @var string
      */
-    protected $description = 'publish assets for belt core';
+    protected $description = 'publish assets for belt workflow';
 
     /**
      * @var array

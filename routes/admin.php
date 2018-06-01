@@ -6,14 +6,10 @@ Route::group([
 ],
     function () {
 
-        # admin/belt/core home
-        Route::get('belt/core/{any?}', function () {
-            return view('belt-core::base.admin.dashboard');
+        # admin/belt/workflow home
+        Route::get('belt/workflow/{any?}', function () {
+            return view('belt-workflow::base.admin.dashboard');
         })->where('any', '(.*)');
 
-        # admin home
-        Route::get('', function () {
-            return view('belt-core::base.admin.home');
-        });
     }
 );

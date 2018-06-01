@@ -2,14 +2,14 @@
 
 use Belt\Core\Testing;
 use Belt\Workflow\WorkRequest;
-use Belt\Core\Observers\WorkRequestObserver;
+use Belt\Workflow\Observers\WorkRequestObserver;
 use Illuminate\Support\Facades\Queue;
 
 class WorkRequestObserverTest extends Testing\BeltTestCase
 {
 
     /**
-     * @covers \Belt\Core\Observers\WorkRequestObserver::saving
+     * @covers \Belt\Workflow\Observers\WorkRequestObserver::saving
      */
     public function testSaving()
     {

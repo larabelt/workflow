@@ -23,7 +23,7 @@
             <exclude>
                 <directory>../src/Services/Update/updates</directory>
                 <directory>../src/Testing</directory>
-                <file>../src/BeltCoreServiceProvider.php</file>
+                <file>../src/BeltWorkflowServiceProvider.php</file>
             </exclude>
         </whitelist>
     </filter>

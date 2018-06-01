@@ -7,7 +7,7 @@ use Belt\Workflow\Services\WorkflowServiceTrait;
 
 /**
  * Class StoreUser
- * @package Belt\Core\Http\Requests
+ * @package Belt\Workflow\Http\Requests
  */
 class StoreWorkRequest extends Belt\Core\Http\Requests\UserRequest
 {

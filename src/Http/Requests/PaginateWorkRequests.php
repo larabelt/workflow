@@ -2,9 +2,10 @@
 
 namespace Belt\Workflow\Http\Requests;
 
+use Belt;
 use Illuminate\Database\Eloquent\Builder;
 
-class PaginateWorkRequests extends PaginateRequest
+class PaginateWorkRequests extends Belt\Core\Http\Requests\PaginateRequest
 {
     public $perPage = 20;
 

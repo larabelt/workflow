@@ -2,10 +2,10 @@
 
 namespace Belt\Workflow;
 
-use Belt, Barryvdh, Collective, Illuminate, Laravel, Rap2hpoutre, Silber;
+use Belt, Barryvdh, Collective, Event, Illuminate, Laravel, Rap2hpoutre, Silber;
+use Belt\Workflow\Services\WorkflowService;
 use Illuminate\Contracts\Auth\Access\Gate as GateContract;
 use Illuminate\Database\Eloquent\Relations\Relation;
-use Illuminate\Foundation\AliasLoader;
 use Illuminate\Routing\Router;
 
 /**
@@ -93,6 +93,22 @@ class BeltWorkflowServiceProvider extends Belt\Core\BeltServiceProvider
 
         foreach ($this->policies as $key => $value) {
             $gate->policy($key, $value);
+        }
+    }
+
+    /**
+     * @param $workflows
+     */
+    static function registerWorflows($workflows)
+    {
+        foreach ($workflows as $class) {
+            WorkflowService::push($class);
+            foreach ((array) $class::events() as $eventName) {
+                Event::listen($eventName, function ($event, $payload = []) use ($class) {
+                    $service = new WorkflowService();
+                    $service->handle(new $class(), $event->item(), $event->user(), $payload);
+                });
+            }
         }
     }
 

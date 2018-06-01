@@ -3,10 +3,9 @@
 namespace Belt\Workflow\Http\Controllers\Api;
 
 use Belt\Workflow\WorkRequest;
-use Belt\Core\Http\Requests;
+use Belt\Workflow\Http\Requests;
 use Belt\Core\Http\Controllers\Morphable;
 use Belt\Core\Http\Controllers\ApiController;
-use Belt\Workflow\Services\WorkflowService;
 use Belt\Workflow\Services\WorkflowServiceTrait;
 use Illuminate\Http\Request;
 
@@ -57,11 +56,7 @@ class WorkRequestsController extends ApiController
     public function store(Requests\StoreWorkRequest $request)
     {
 
-        echo 111;
-
         $this->authorize('create', WorkRequest::class);
-
-        echo 222;
 
         $input = $request->all();
 

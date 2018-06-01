@@ -2,7 +2,7 @@
 
 use Mockery as m;
 use Belt\Core\Testing;
-use Belt\Core\Http\Requests\PaginateWorkRequests;
+use Belt\Workflow\Http\Requests\PaginateWorkRequests;
 use Belt\Workflow\Services\WorkRequestService;
 use Illuminate\Database\Eloquent\Builder;
 

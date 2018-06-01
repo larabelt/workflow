@@ -1,0 +1,47 @@
+$fa-font-path: "/fonts";
+@import "node_modules/font-awesome/scss/font-awesome";
+
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "theme/admin-lte";
+@import "components/buttons";
+@import "components/column-sorter";
+@import "components/content";
+@import "components/dropdown";
+@import "components/filters";
+@import "components/form-roles";
+@import "components/header";
+@import "components/icons";
+@import "components/pagination";
+@import "components/tiles";
+
+.no-gutter > [class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.break-word {
+    -ms-word-break: break-all;
+    word-break: break-all;
+
+    /* Non standard for webkit */
+    word-break: break-word;
+
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+.row-striped:nth-of-type(odd) {
+    background-color: #efefef;
+}
+
+.row-striped:nth-of-type(even) {
+    background-color: #ffffff;
+}
+
+.truncate {
+    width: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

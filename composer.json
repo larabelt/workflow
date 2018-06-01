@@ -1,0 +1,48 @@
+{
+  "name": "larabelt/workflow",
+  "description": "Workflow package for any LaraBelt app.",
+  "keywords": [
+    "cms",
+    "laravel",
+    "larabelt"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Matt Crowe",
+      "email": "github.mpc@zym.me"
+    },
+    {
+      "name": "Rob LaSota",
+      "email": "rob.lasota@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=7.1.3",
+    "barryvdh/laravel-cors": "^0.11.0",
+    "doctrine/dbal": "^2.5",
+    "guzzlehttp/guzzle": ">=6.2.0",
+    "kalnoy/nestedset": "^4.3",
+    "kint-php/kint": "^2.0",
+    "laravel/framework": ">=5.6.0",
+    "laravelcollective/html": "5.6.*",
+    "maatwebsite/excel": "~2.1.0",
+    "riimu/kit-phpencoder": "^2.1",
+    "rutorika/sortable": "4.2.*",
+    "sabre/uri": "^2",
+    "silber/bouncer": "v1.0.0-rc.1",
+    "spatie/db-dumper": "^2.9"
+  },
+  "require-dev": {
+    "barryvdh/laravel-debugbar": "^3.1",
+    "barryvdh/laravel-ide-helper": "2.4.*",
+    "rap2hpoutre/laravel-log-viewer": "^0.8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Belt\\Workflow\\": "src/"
+    },
+  }
+}

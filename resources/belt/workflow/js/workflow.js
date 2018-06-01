@@ -1,4 +1,5 @@
 import workRequests from 'belt/workflow/js/work-requests/routes';
+import store from 'belt/core/js/store/index';
 
 window.larabelt.workflow = _.get(window, 'larabelt.workflow', {});
 

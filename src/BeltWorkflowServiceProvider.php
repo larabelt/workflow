@@ -43,6 +43,9 @@ class BeltWorkflowServiceProvider extends Belt\Core\BeltServiceProvider
         $this->app['belt']->addPackage('workflow', ['dir' => __DIR__ . '/..']);
         $this->app['belt']->publish('belt-workflow:publish');
         $this->app['belt']->seeders('BeltWorkflowSeeder');
+
+        // access map for window config
+        Belt\Core\Services\AccessService::put('*', 'work_requests');
     }
 
     /**

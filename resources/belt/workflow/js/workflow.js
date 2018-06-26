@@ -1,3 +1,4 @@
+import workRequestAlerts from 'belt/workflow/js/work-requests/list-workable';
 import workRequests from 'belt/workflow/js/work-requests/routes';
 import store from 'belt/core/js/store/index';
 
@@ -6,11 +7,6 @@ window.larabelt.workflow = _.get(window, 'larabelt.workflow', {});
 export default class BeltWorkflow {
 
     constructor(components = []) {
-        this.components = [];
-
-        _(components).forEach((value, index) => {
-            this.addComponent(value);
-        });
 
         if ($('#belt-workflow').length > 0) {
 
@@ -25,12 +21,11 @@ export default class BeltWorkflow {
             const app = new Vue({router, store}).$mount('#belt-workflow');
         }
 
-        let modals = new Vue({
-            el: '#vue-modals'
-        });
+        if ($('#belt-work-requests-alerts').length > 0) {
+            Vue.component('work-requests-alerts', workRequestAlerts);
+            new Vue({store, el: '#belt-app-pre-main'});
+        }
+
     }
 
-    addComponent(Class) {
-        this.components[Class.name] = new Class();
-    }
 }

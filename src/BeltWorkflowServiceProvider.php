@@ -43,6 +43,9 @@ class BeltWorkflowServiceProvider extends Belt\Core\BeltServiceProvider
         $this->app['belt']->addPackage('workflow', ['dir' => __DIR__ . '/..']);
         $this->app['belt']->publish('belt-workflow:publish');
         $this->app['belt']->seeders('BeltWorkflowSeeder');
+
+        // admin layout includes
+        Belt\Core\Http\ViewComposers\PreMainAdminComposer::push('belt-workflow::layouts.admin.partials.work-request-alerts');
     }
 
     /**

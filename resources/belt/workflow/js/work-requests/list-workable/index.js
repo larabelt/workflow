@@ -35,7 +35,6 @@ export default {
         },
     },
     mounted() {
-        console.log('wr alerts mounted');
         if (this.allowed) {
             this.table.updateQuery({
                 is_open: true,

@@ -30,6 +30,6 @@ class BeltCreateWorkRequestsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('work_requests');
+        Schema::dropIfExists('work_requests');
     }
 }

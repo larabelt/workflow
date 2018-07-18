@@ -26,7 +26,7 @@ class WorkRequestsFunctionalTest extends Testing\BeltTestCase
         ]);
 
         $response->assertStatus(201);
-        $response->assertJsonFragment(['id']);
+        $response->assertJsonFragment(['workflow_key' => 'work-requests-functional-stub']);
         $workRequestID = array_get($response->json(), 'id');
 
         # show

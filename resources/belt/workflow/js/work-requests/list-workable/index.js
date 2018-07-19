@@ -4,14 +4,14 @@ import html from 'belt/workflow/js/work-requests/list-workable/template.html';
 
 export default {
     props: {
-        morphable_id: {
+        entity_id: {
             default: function () {
-                return this.$parent.morphable_id;
+                return this.$parent.entity_id;
             }
         },
-        morphable_type: {
+        entity_type: {
             default: function () {
-                return this.$parent.morphable_type;
+                return this.$parent.entity_type;
             }
         },
     },
@@ -22,7 +22,7 @@ export default {
     },
     computed: {
         allowed() {
-            if (!this.morphable_id || !this.morphable_type) {
+            if (!this.entity_id || !this.entity_type) {
                 return false;
             }
             return true;
@@ -38,8 +38,8 @@ export default {
         if (this.allowed) {
             this.table.updateQuery({
                 is_open: true,
-                workable_id: this.morphable_id,
-                workable_type: this.morphable_type,
+                workable_id: this.entity_id,
+                workable_type: this.entity_type,
             });
             this.table.index();
         }

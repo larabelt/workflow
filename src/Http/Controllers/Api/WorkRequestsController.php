@@ -4,7 +4,7 @@ namespace Belt\Workflow\Http\Controllers\Api;
 
 use Belt\Workflow\WorkRequest;
 use Belt\Workflow\Http\Requests;
-use Belt\Core\Http\Controllers\Morphable;
+use Belt\Core\Http\Controllers\Behaviors\Morphable;
 use Belt\Core\Http\Controllers\ApiController;
 use Belt\Workflow\Services\WorkflowServiceTrait;
 use Illuminate\Http\Request;
@@ -60,7 +60,7 @@ class WorkRequestsController extends ApiController
 
         $input = $request->all();
 
-        $this->morphable($input['workable_type'], $input['workable_id']);
+        $this->morph($input['workable_type'], $input['workable_id']);
 
         $workRequest = $this->workRequests->create([
             'workable_id' => $input['workable_id'],

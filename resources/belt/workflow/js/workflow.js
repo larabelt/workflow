@@ -1,3 +1,9 @@
+import 'belt/workflow/js/bootstrap/inputs';
+import 'belt/workflow/js/bootstrap/filters';
+import 'belt/workflow/js/bootstrap/functions';
+import 'belt/workflow/js/bootstrap/mixins';
+import 'belt/workflow/js/bootstrap/tiles';
+
 import workRequestAlerts from 'belt/workflow/js/work-requests/list-workable';
 import workRequests from 'belt/workflow/js/work-requests/routes';
 import store from 'belt/core/js/store/index';
@@ -18,14 +24,14 @@ export default class BeltWorkflow {
 
             router.addRoutes(workRequests);
 
-            const app = new Vue({router, store}).$mount('#belt-workflow');
+            new Vue({router, store}).$mount('#belt-workflow');
         }
 
         if ($('#belt-work-requests-alerts').length > 0) {
             Vue.component('work-requests-alerts', workRequestAlerts);
             new Vue({store, el: '#belt-app-pre-main'});
         }
-
+x
     }
 
 }

@@ -13,7 +13,7 @@ class PaginateWorkRequests extends Belt\Core\Http\Requests\PaginateRequest
 
     public $groupable = [
         'work_requests.workable_type',
-        'work_requests.workflow_key',
+        'work_requests.subtype',
     ];
 
     public $sortBy = 'asc';
@@ -28,7 +28,7 @@ class PaginateWorkRequests extends Belt\Core\Http\Requests\PaginateRequest
         'work_requests.id',
         'work_requests.workable_id',
         'work_requests.workable_type',
-        'work_requests.workflow_key',
+        'work_requests.subtype',
         'work_requests.place',
     ];
 
@@ -42,8 +42,8 @@ class PaginateWorkRequests extends Belt\Core\Http\Requests\PaginateRequest
             $query->where('work_requests.is_open', $this->get('is_open') ? true : false);
         }
 
-        if ($this->get('workflow_key')) {
-            $query->where('work_requests.workflow_key', $this->get('workflow_key'));
+        if ($this->get('subtype')) {
+            $query->where('work_requests.subtype', $this->get('subtype'));
         }
 
         if ($this->get('workable_id')) {

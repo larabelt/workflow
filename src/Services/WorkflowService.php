@@ -110,7 +110,7 @@ class WorkflowService
             'is_open' => true,
             'workable_id' => $workable->id,
             'workable_type' => $workable->getMorphClass(),
-            'workflow_key' => $workflow::KEY,
+            'subtype' => $workflow::KEY,
         ]);
 
         $workRequest->update([

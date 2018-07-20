@@ -24,12 +24,12 @@ class PaginateWorkRequestTest extends Testing\BeltTestCase
         # modifyQuery
         $qbMock = m::mock(Builder::class);
         $qbMock->shouldReceive('where')->once()->with('work_requests.is_open', true);
-        $qbMock->shouldReceive('where')->once()->with('work_requests.workflow_key', 'foo');
+        $qbMock->shouldReceive('where')->once()->with('work_requests.subtype', 'foo');
         $qbMock->shouldReceive('where')->once()->with('work_requests.workable_id', 123);
         $qbMock->shouldReceive('where')->once()->with('work_requests.workable_type', 'foo');
         $paginateRequest = new PaginateWorkRequests([
             'is_open' => true,
-            'workflow_key' => 'foo',
+            'subtype' => 'foo',
             'workable_id' => 123,
             'workable_type' => 'foo',
         ]);

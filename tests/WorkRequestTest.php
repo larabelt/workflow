@@ -17,7 +17,7 @@ class WorkRequestTest extends BeltTestCase
         WorkflowService::push(WorkRequestWorkflowStub::class);
 
         $workRequest = factory(WorkRequest::class)->make([
-            'workflow_key' => WorkRequestWorkflowStub::KEY,
+            'subtype' => WorkRequestWorkflowStub::KEY,
         ]);
 
         # workable

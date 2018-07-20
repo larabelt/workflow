@@ -22,7 +22,7 @@ class WorkRequest extends Model
     /**
      * @var array
      */
-    protected $fillable = ['workable_id', 'workable_type', 'workflow_key'];
+    protected $fillable = ['workable_id', 'workable_type', 'subtype'];
 
     /**
      * The attributes that should be cast to native types.
@@ -57,7 +57,7 @@ class WorkRequest extends Model
     public function getWorkflow()
     {
         $class = BaseWorkFlow::class;
-        if ($key = $this->workflow_key) {
+        if ($key = $this->subtype) {
             $class = WorkflowService::get($key) ?: BaseWorkFlow::class;
         }
 

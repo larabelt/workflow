@@ -53,7 +53,7 @@ class WorkflowServiceTest extends Testing\BeltTestCase
             'is_open' => true,
             'workable_id' => $team->id,
             'workable_type' => 'teams',
-            'workflow_key' => $workflow::KEY,
+            'subtype' => $workflow::KEY,
         ])->andReturn($workRequest);
         Morph::shouldReceive('type2QB')->with('work_requests')->andReturn($qb);
         $service->handle($workflow, $team);
@@ -79,7 +79,7 @@ class WorkflowServiceTest extends Testing\BeltTestCase
         $workRequest->workable = $team;
         $workRequest->is_open = true;
         $workRequest->place = 'review';
-        $workRequest->workflow_key = 'workflow-service-stub';
+        $workRequest->subtype = 'workflow-service-stub';
         $service->apply($workRequest, 'publish');
         $this->assertEquals(false, $workRequest->is_open);
         $this->assertEquals('published', $workRequest->place);

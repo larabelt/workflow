@@ -21,7 +21,7 @@ class StoreWorkRequest extends Belt\Core\Http\Requests\UserRequest
         $availableWorkflows = $this->workflowService()->get();
 
         return [
-            'workflow_key' => [
+            'subtype' => [
                 'required',
                 'in:' . implode(',', array_keys($availableWorkflows))
             ],

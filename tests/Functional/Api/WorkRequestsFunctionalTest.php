@@ -20,13 +20,13 @@ class WorkRequestsFunctionalTest extends Testing\BeltTestCase
 
         # store
         $response = $this->json('POST', '/api/v1/work-requests', [
-            'workflow_key' => 'work-requests-functional-stub',
+            'subtype' => 'work-requests-functional-stub',
             'workable_id' => 1,
             'workable_type' => 'teams',
         ]);
 
         $response->assertStatus(201);
-        $response->assertJsonFragment(['workflow_key' => 'work-requests-functional-stub']);
+        $response->assertJsonFragment(['subtype' => 'work-requests-functional-stub']);
         $workRequestID = array_get($response->json(), 'id');
 
         # show

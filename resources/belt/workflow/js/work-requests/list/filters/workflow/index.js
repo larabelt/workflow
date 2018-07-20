@@ -8,7 +8,7 @@ export default {
     data() {
         return {
             groupedItems: new Table(),
-            workflow_key: null,
+            subtype: null,
         }
     },
     computed: {
@@ -16,12 +16,12 @@ export default {
             let options = {
                 '': '',
             };
-            let items = _.uniqBy(this.groupedItems.items, 'workflow_key');
+            let items = _.uniqBy(this.groupedItems.items, 'subtype');
             items = _.sortBy(items, [function (o) {
-                return o.workflow_key ? o.workflow_key : 1;
+                return o.subtype ? o.subtype : 1;
             }]);
             _.forEach(items, (item) => {
-                options[item.workflow_key] = item.workflow.name;
+                options[item.subtype] = item.workflow.name;
             });
             return options;
         },
@@ -32,23 +32,23 @@ export default {
     mounted() {
         this.table.updateQueryFromRouter();
         this.groupedItems.updateQuery({
-            groupBy: 'work_requests.workflow_key',
+            groupBy: 'work_requests.subtype',
         });
-        this.workflow_key = this.table.query.workflow_key;
+        this.subtype = this.table.query.subtype;
         this.groupedItems.index();
     },
     watch: {
-        'table.query.workflow_key': function (workflow_key) {
-            if (workflow_key) {
-                this.workflow_key = workflow_key;
+        'table.query.subtype': function (subtype) {
+            if (subtype) {
+                this.subtype = subtype;
             }
         }
     },
     methods: {
         change() {
-            delete this.table.query.workflow_key;
-            if (this.workflow_key) {
-                this.table.updateQuery({workflow_key: this.workflow_key});
+            delete this.table.query.subtype;
+            if (this.subtype) {
+                this.table.updateQuery({subtype: this.subtype});
             }
             this.$emit('filter-workflow-update');
         },

@@ -1,4 +1,4 @@
-import filter from 'belt/core/js/inputs/filter-base';
+import filter from 'belt/core/js/filters/base';
 import Table from 'belt/workflow/js/work-requests/table';
 import html from 'belt/workflow/js/work-requests/list/filters/workflow/template.html';
 

@@ -1,5 +1,5 @@
 import Table from 'belt/workflow/js/work-requests/table';
-import filterSearch from 'belt/core/js/inputs/filter-search';
+
 import filterIsOpen from 'belt/workflow/js/work-requests/list/filters/is_open';
 import filterType from 'belt/workflow/js/work-requests/list/filters/type';
 import filterWorkflow from 'belt/workflow/js/work-requests/list/filters/workflow';
@@ -34,7 +34,7 @@ export default {
                 }, 300),
             },
             components: {
-                filterSearch,
+                
                 filterIsOpen,
                 filterType,
                 filterWorkflow,

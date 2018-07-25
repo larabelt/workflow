@@ -31,7 +31,7 @@ export default class BeltWorkflow {
             Vue.component('work-requests-alerts', workRequestAlerts);
             new Vue({store, el: '#belt-app-pre-main'});
         }
-x
+
     }
 
 }

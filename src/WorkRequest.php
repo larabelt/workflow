@@ -12,8 +12,12 @@ use Illuminate\Database\Eloquent\Model;
  * Class WorkRequest
  * @package Belt\Workflow
  */
-class WorkRequest extends Model
+class WorkRequest extends Model implements
+    Belt\Core\Behaviors\IncludesSubtypesInterface,
+    Belt\Core\Behaviors\ParamableInterface
 {
+    use Belt\Core\Behaviors\IncludesSubtypes;
+
     /**
      * @var string
      */

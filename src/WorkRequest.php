@@ -45,7 +45,12 @@ class WorkRequest extends Model implements
     /**
      * @var array
      */
-    protected $appends = ['workflow', 'params'];
+    protected $with = ['params'];
+
+    /**
+     * @var array
+     */
+    protected $appends = ['workflow'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo

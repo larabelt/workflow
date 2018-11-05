@@ -29,11 +29,6 @@ class WorkRequest extends Model implements
     protected $fillable = ['workable_id', 'workable_type', 'subtype'];
 
     /**
-     * @var array
-     */
-    protected $appends = ['image', 'type', 'default_url', 'morph_class', 'params'];
-
-    /**
      * The attributes that should be cast to native types.
      *
      * @var array
@@ -50,7 +45,7 @@ class WorkRequest extends Model implements
     /**
      * @var array
      */
-    protected $appends = ['workflow'];
+    protected $appends = ['workflow', 'params'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo

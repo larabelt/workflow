@@ -33,7 +33,7 @@ class PublishCommand extends Command
         'vendor/larabelt/workflow/database/factories' => 'database/factories',
         'vendor/larabelt/workflow/database/migrations' => 'database/migrations',
         'vendor/larabelt/workflow/database/seeds' => 'database/seeds',
-        'vendor/larabelt/workflow/docs' => 'resources/docs',
+        'vendor/larabelt/workflow/docs' => 'resources/docs/raw',
     ];
 
 }

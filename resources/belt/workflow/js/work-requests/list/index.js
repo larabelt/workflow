@@ -48,6 +48,7 @@ export default {
         <div>
             <heading>
                 <span slot="title">Work Request Manager</span>
+                <span slot="help"><link-help docKey="admin.workflow.work_requests.manager" /></span>
                 <li><router-link :to="{ name: 'work-requests' }">Work Request Manager</router-link></li>
             </heading>
             <section class="content">

@@ -26,7 +26,8 @@
       "updates"
     ],
     "psr-4": {
-      "Belt\\Workflow\\": "src/"
+      "Belt\\Workflow\\": "src/",
+      "Tests\\Belt\\Workflow\\": "tests/"
     }
   }
 }

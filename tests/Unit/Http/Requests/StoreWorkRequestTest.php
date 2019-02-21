@@ -1,9 +1,9 @@
-<?php
+<?php namespace Tests\Belt\Workflow\Unit\Http\Requests;
 
-use Belt\Core\Testing;
+use Belt\Core\Tests;
 use Belt\Workflow\Http\Requests\StoreWorkRequest;
 
-class StoreWorkRequestTest extends Testing\BeltTestCase
+class StoreWorkRequestTest extends Tests\BeltTestCase
 {
 
     /**

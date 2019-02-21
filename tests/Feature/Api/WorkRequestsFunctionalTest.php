@@ -1,10 +1,10 @@
 <?php
 
-use Belt\Core\Testing;
+use Belt\Core\Tests;
 use Belt\Workflow\Workflows\BaseWorkflow;
 use Belt\Workflow\Services\WorkflowService;
 
-class WorkRequestsFunctionalTest extends Testing\BeltTestCase
+class WorkRequestsFunctionalTest extends Tests\BeltTestCase
 {
 
     public function test()

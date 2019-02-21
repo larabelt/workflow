@@ -1,11 +1,11 @@
-<?php
+<?php namespace Tests\Belt\Workflow\Unit\Observers;
 
-use Belt\Core\Testing;
+use Belt\Core\Tests;
 use Belt\Workflow\WorkRequest;
 use Belt\Workflow\Observers\WorkRequestObserver;
 use Illuminate\Support\Facades\Queue;
 
-class WorkRequestObserverTest extends Testing\BeltTestCase
+class WorkRequestObserverTest extends Tests\BeltTestCase
 {
 
     /**

@@ -1,15 +1,15 @@
-<?php
+<?php namespace Tests\Belt\Workflow\Unit\Services;
 
 use Mockery as m;
 use Belt\Core\Team;
-use Belt\Core\Testing;
+use Belt\Core\Tests;
 use Belt\Workflow\WorkRequest;
 use Belt\Workflow\Services\WorkflowService;
 use Belt\Workflow\Workflows\BaseWorkflow;
 use Belt\Core\Facades\MorphFacade as Morph;
 use Illuminate\Database\Eloquent\Builder;
 
-class WorkflowServiceTest extends Testing\BeltTestCase
+class WorkflowServiceTest extends Tests\BeltTestCase
 {
     public function tearDown()
     {

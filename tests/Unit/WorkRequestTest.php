@@ -1,6 +1,6 @@
-<?php
+<?php namespace Tests\Belt\Workflow\Unit;
 
-use Belt\Core\Testing\BeltTestCase;
+use Belt\Core\Tests\BeltTestCase;
 use Belt\Workflow\WorkRequest;
 use Belt\Workflow\Workflows\BaseWorkflow;
 use Belt\Workflow\Services\WorkflowService;

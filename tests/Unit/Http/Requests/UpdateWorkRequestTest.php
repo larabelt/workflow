@@ -1,16 +1,16 @@
 <?php namespace Tests\Belt\Workflow\Unit\Http\Requests;
 
 use Mockery as m;
-use Belt\Core\Tests;
+use Tests\Belt\Core;
 use Belt\Workflow\WorkRequest;
 use Belt\Workflow\Http\Requests\UpdateWorkRequest;
 use Belt\Workflow\Services\WorkflowService;
 use Illuminate\Database\Eloquent\Builder;
 
-class UpdateWorkRequestTest extends Tests\BeltTestCase
+class UpdateWorkRequestTest extends \Tests\Belt\Core\BeltTestCase
 {
 
-    use Tests\CommonMocks;
+    use \Tests\Belt\Core\Base\CommonMocks;
 
     public function tearDown()
     {

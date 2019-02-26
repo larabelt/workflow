@@ -1,10 +1,10 @@
 <?php namespace Tests\Belt\Workflow\Unit\Services;
 
-use Belt\Core\Tests;
+use Tests\Belt\Core;
 use Belt\Workflow\Services\WorkflowService;
 use Belt\Workflow\Services\WorkflowServiceTrait;
 
-class WorkflowServiceTraitTest extends Tests\BeltTestCase
+class WorkflowServiceTraitTest extends \Tests\Belt\Core\BeltTestCase
 {
     /**
      * @covers \Belt\Workflow\Services\WorkflowServiceTrait::workflowService

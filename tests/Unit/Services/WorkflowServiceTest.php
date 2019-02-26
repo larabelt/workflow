@@ -2,14 +2,14 @@
 
 use Mockery as m;
 use Belt\Core\Team;
-use Belt\Core\Tests;
+use Tests\Belt\Core;
 use Belt\Workflow\WorkRequest;
 use Belt\Workflow\Services\WorkflowService;
 use Belt\Workflow\Workflows\BaseWorkflow;
 use Belt\Core\Facades\MorphFacade as Morph;
 use Illuminate\Database\Eloquent\Builder;
 
-class WorkflowServiceTest extends Tests\BeltTestCase
+class WorkflowServiceTest extends \Tests\Belt\Core\BeltTestCase
 {
     public function tearDown()
     {
